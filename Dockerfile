@@ -6,6 +6,9 @@ MAINTAINER Andre Fernandes <andre@vertigo.com.br>
 
 RUN wget http://registry.vtg/files/ibm/wlp-webProfile7-java8-linux-x86_64-8.5.5.6.zip -q -O /opt/wlp-web.zip && \
     unzip /opt/wlp-web.zip -d /opt/ && \
-    rm /opt/wlp-web.zip
+    rm /opt/wlp-web.zip && \
+    echo "PATH=$PATH:/opt/wlp/java/bin" >> /etc/profile && \
+    echo "JAVA_HOME=/opt/wlp/java" >> /etc/profile && \
+    echo "export PATH JAVA_HOME" >> /etc/profile
 
 EXPOSE 9080
