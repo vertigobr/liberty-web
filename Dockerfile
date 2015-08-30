@@ -11,4 +11,7 @@ RUN wget http://registry.vtg/files/ibm/wlp-webProfile7-java8-linux-x86_64-8.5.5.
     echo "JAVA_HOME=/opt/wlp/java" >> /etc/profile && \
     echo "export PATH JAVA_HOME" >> /etc/profile
 
+ENV PATH $PATH:/opt/wlp/java/bin
+ENV JAVA_HOME /opt/wlp/java
+
 EXPOSE 9080
