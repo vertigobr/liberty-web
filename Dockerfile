@@ -6,7 +6,7 @@ MAINTAINER Andre Fernandes <andre@vertigo.com.br>
 
 WORKDIR /opt/
 
-RUN wget http://registry.vtg/files/ibm/wlp-beta-webProfile7-java8-linux-x86_64-2015.9.0.0.zip -q -O /opt/wlp-web.zip && \
+RUN wget http://registry.vtg/files/ibm/wlp-webProfile7-java8-linux-x86_64-8.5.5.7.zip -q -O /opt/wlp-web.zip && \
     unzip wlp-web.zip && \
     rm /opt/wlp-web.zip && \
     echo "PATH=$PATH:/opt/wlp/java/bin" >> /etc/profile && \
