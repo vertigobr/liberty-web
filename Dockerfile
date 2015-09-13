@@ -17,6 +17,7 @@ RUN wget http://registry.vtg/files/ibm/wlp-beta-webProfile7-java8-linux-x86_64-2
 RUN mv /opt/wlp/java /opt/wlp/jbug && \
     mv /opt/wlp/jbug/java /opt/wlp/java
 
+ADD src/server.xml /opt/wlp/templates/servers/defaultServer/server.xml
 
 ENV PATH $PATH:/opt/wlp/java/bin
 ENV JAVA_HOME /opt/wlp/java
